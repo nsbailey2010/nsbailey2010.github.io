@@ -83,5 +83,9 @@ function menuInit() {
             $(this).closest('li').addClass('active');
         }
     });
+    console.log(path)
+    console.log(href)
+    console.log(path.substring(0, href.length) === href)
+
 }
 
