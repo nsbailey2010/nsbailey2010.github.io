@@ -81,11 +81,11 @@ function menuInit() {
         var href = $(this).attr('href');
         if (path.substring(0, href.length) === href) {
             $(this).closest('li').addClass('active');
-            console.log(href)
-            console.log(path.substring(0, href.length) === href)
+            console.log('href=' + href);
+            console.log(path.substring(0, href.length) === href);
         }
     });
-    console.log(path)
+    console.log('path='+path);
     
     
 
