@@ -88,8 +88,8 @@ function menuInit() {
             
         }
     });
-    console.log(href2);
-    console.log('path='+path);
+    
+    console.log('path='+path + 'href=' + href2);
     
     
 
