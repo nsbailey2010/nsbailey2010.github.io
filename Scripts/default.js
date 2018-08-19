@@ -61,7 +61,7 @@ function menuInit() {
     var $menu = $('#menu');
     var $btns = $('.btn');
 
-    for(var i = 0; i < $btn.length; i++) {
+    for(var i = 0; i < $btns.length; i++) {
         $btns[i].click(function() {
             var $current = $('.active');
             $current.removeClass('active');
