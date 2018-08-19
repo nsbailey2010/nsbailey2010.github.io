@@ -76,9 +76,10 @@ function menuInit() {
     var path = window.location.pathname;
     path = path.replace(/\/$/, "");
     path = decodeURIComponent(path);
-
+    var href2 = ''
     $(".navbar a").each(function () {
         var href = $(this).attr('href');
+        href2 = href;
         console.log('href=' + href);
         console.log(path.substring(0, href.length) === href);
         if (path.substring(0, href.length) === href) {
@@ -87,6 +88,7 @@ function menuInit() {
             
         }
     });
+    console.log(href);
     console.log('path='+path);
     
     
