@@ -59,13 +59,13 @@ function toggleCollapse() {
 
 function menuInit() {
     var $menu = $('#menu');
-    var $btns = $('.btn');
+    var $btns = $($menu.btn);
 
     for(var i = 0; i < $btns.length; i++) {
         $btns[i].click(function() {
-            var $current = $('.active');
-            $current.removeClass('active');
-            this.addClass('active');
+            var $current = $('li.active');
+            $current.toggleClass('active');
+            this.toggleClass('active');
         });
     }
     
