@@ -79,10 +79,12 @@ function menuInit() {
 
     $(".navbar a").each(function () {
         var href = $(this).attr('href');
+        console.log('href=' + href);
+        console.log(path.substring(0, href.length) === href);
         if (path.substring(0, href.length) === href) {
             $(this).closest('li').addClass('active');
-            console.log('href=' + href);
-            console.log(path.substring(0, href.length) === href);
+            
+            
         }
     });
     console.log('path='+path);
