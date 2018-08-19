@@ -57,16 +57,31 @@ function toggleCollapse() {
     $('.navbar').toggleClass('collapse');
 }
 
-function menuInit() {
+// function menuInit() {
 
-var menu = document.getElementById("menu");
-var btns = menu.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    $("#main").load(this.attr('data'));
-  });
-}}
+// var menu = document.getElementById("menu");
+// var btns = menu.getElementsByClassName("btn");
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function() {
+//     var current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//     $("#main").load(this.attr('data'));
+//   });
+// }}
+
+
+
+function menuInit() {
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+    $(".navbar a").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this).closest('li').addClass('active');
+        }
+    });
+}
 
