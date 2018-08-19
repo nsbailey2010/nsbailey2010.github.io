@@ -9,7 +9,8 @@ $(document).ready(function () {
     window.setInterval(nextSlide, 5000)
     $("header").load("header.html");
     $("nav").load("nav.html") 
-    $("footer").load("footer.html"); 
+    $("footer").load("footer.html");
+    menuInit(); 
 });
 
 var slideNum;
@@ -54,6 +55,20 @@ function previousSlide() {
 
 function toggleCollapse() {
     $('.navbar').toggleClass('collapse');
+}
+
+function menuInit() {
+    var $menu = $('#menu');
+    var $btns = $('.btn');
+
+    for(var i = 0; i < $btn.length; i++) {
+        $btns[i].click(function() {
+            var $current = $('.active');
+            $current.removeClass('active');
+            this.addClass('active');
+        });
+    }
+    
 }
 
 
