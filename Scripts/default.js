@@ -58,18 +58,15 @@ function toggleCollapse() {
 }
 
 function menuInit() {
-    var $menu = $('#menu');
-    var $btns = $($menu.btn);
-
-    for(var i = 0; i < $btns.length; i++) {
-        $btns[i].click(function() {
-            var $current = $('li.active');
-            $current.toggleClass('active');
-            this.toggleClass('active');
-        });
-    }
-    
-}
-
+   
+var menu = document.getElementById("menu");
+var btns = menu.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}}
 
 
