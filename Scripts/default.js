@@ -7,7 +7,9 @@ $(document).ready(function () {
     
     slideshowInit();
     window.setInterval(nextSlide, 5000)
-
+    $("#header").load("header.html");
+    $("nav").load("nav.html") 
+    $("footer").load("footer.html"); 
 });
 
 var slideNum;
